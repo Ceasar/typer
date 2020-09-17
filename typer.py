@@ -50,7 +50,7 @@ while True:
     word = words[counter]
     for word_typed_wpm in words_typed:
         word_typed, line_typed, word_wpm, line_total_letters, line_time_taken = word_typed_wpm
-        print("{}, {}, WPM: ({:02.2f}), Letters: {}, Time taken: {:03.2f}, Line WPM: {:02.2f}".format(
+        print("{} {} (WPM: {:02.2f}, Letters: {}, Time taken: {:03.2f}, Line WPM: {:02.2f})".format(
             "+" if word_typed == line_typed else "-",
             word_typed,
             word_wpm,
