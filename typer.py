@@ -21,15 +21,16 @@ It could even store data as file on your computer.
 
 Maybe let user set max length.
 """
+import fileinput
 import os
 import random
 import time
 import string
+import sys
 
 DICTIONARY = '/usr/share/dict/words'
-with open('prideandprejudice.txt') as fp:
-    words = [line.strip(string.whitespace) for line in fp.read().split('\n')]
-    words = [line for line in words if len(line) > 1]
+words = [line.strip(string.whitespace) for line in fileinput.input()]
+words = [line for line in words if len(line) > 1]
 
 words_tried = 0
 word_wins = 0
